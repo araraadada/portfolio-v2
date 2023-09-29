@@ -17,6 +17,7 @@ const config: Config = {
         "Outer-Space": "#2C3639",
         "Cape-Cod": "#3F4E4F",
         Leather: "#A27B5C",
+        "Leather-400": "#614a37",
         "Moon-Mist": "#DCD7C9",
       },
     },

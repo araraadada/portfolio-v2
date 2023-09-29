@@ -4,17 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
-  return (
-    <header className="flex justify-center items-center">
-      <Navigation />
-    </header>
-  );
+  return <Navigation />;
 }
 
 const Navigation = () => {
   return (
-    <div className="flex rounded max-w-full bg-Cape-Cod w-full justify-between mx-auto items-center py-4 md:flex">
-      <div className="flex justify-center items-center md:flex-1 md:mx-4 md:justify-start md:items-start">
+    <header className="flex rounded max-w-full bg-Cape-Cod w-full justify-between mx-auto items-center py-4 md:flex sticky">
+      <div className="flex justify-center mx-4 items-center md:flex-1 md:mx-4 md:justify-start md:items-start">
         <Image src="/logo.png" width={50} height={50} alt="Logo" />
       </div>
       <nav className="flex md:mx-4">
@@ -46,7 +42,7 @@ const Navigation = () => {
         </ul>
         <DropdownButton />
       </nav>
-    </div>
+    </header>
   );
 };
 
@@ -94,17 +90,23 @@ const DropdownButton = () => {
         )}
       </button>
       {isOpen && (
-        <div className="absolute mt-2 right-0 text-center bg-Leather border border-Moon-Mist rounded shadow-lg">
-          <a href="#" className="block px-4 py-2 text-white active:bg-Leather">
+        <div className="absolute mt-2 right-0 text-center bg-Leather border-2 border-Moon-Mist rounded shadow-lg">
+          <a
+            href="#"
+            className="block px-4 py-2 text-white active:bg-Leather-400 active:text-Moon-Mist border-b"
+          >
             Home
           </a>
           <a
             href="#"
-            className="block px-4 py-2 text-white active:bg-Leather ring-1 ring-black ring-opacity-5"
+            className="block px-4 py-2 text-white active:bg-Leather-400 active:text-Moon-Mist border-b"
           >
             About
           </a>
-          <a href="#" className="block px-4 py-2 text-white active:bg-Leather">
+          <a
+            href="#"
+            className="block px-4 py-2 text-white active:bg-Leather-400 active:text-Moon-Mist "
+          >
             Contact
           </a>
         </div>
