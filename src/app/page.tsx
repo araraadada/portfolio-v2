@@ -9,12 +9,18 @@ export default function Home() {
 
 const Navigation = () => {
   return (
-    <header className="flex rounded max-w-full bg-Cape-Cod w-full justify-between mx-auto items-center py-4 md:flex sticky">
-      <div className="flex justify-center mx-4 items-center md:flex-1 md:mx-4 md:justify-start md:items-start">
-        <Image src="/logo.png" width={50} height={50} alt="Logo" />
+    <header className="flex rounded max-w-full bg-Cape-Cod w-full justify-between items-center py-2 sticky">
+      <div className="flex-1 mx-2 items-center md:flex-1 md:mx-4 md:justify-start md:items-start">
+        <Image
+          className="flex justify-center mx-auto md:justify-start md:mx-0"
+          src="/logo.png"
+          width={50}
+          height={50}
+          alt="Logo"
+        />
       </div>
-      <nav className="flex md:mx-4">
-        <ul className="flex mx-2 my-2 gap-y-8 gap-x-4 collapse md:visible">
+      <nav className="flex mx-auto md:mx-4">
+        <ul className="mx-2 my-2 gap-y-8 gap-x-4 hidden md:visible md:flex">
           <li>
             <a
               className="text-lg text-Moon-Mist hover:text-Leather active:text-Leather active:font-semibold transition-all ease-in-out duration-200"
